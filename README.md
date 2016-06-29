@@ -1,2 +1,76 @@
 # vue-stroll
+[![npm](https://img.shields.io/npm/v/vue-stroll.svg?maxAge=2592000&style=flat-square)](https://www.npmjs.com/package/vue-stroll)
+![Download](https://img.shields.io/npm/dt/vue-stroll.svg?style=flat-square)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/xiaoluoboding/vue-stroll/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/xiaoluoboding/vue-stroll.svg?style=flat-square)](https://github.com/xiaoluoboding/vue-stroll/stargazers)
+
 Vue.js + Stroll.js
+
+[![NPM](https://nodei.co/npm/vue-stroll.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-stroll/)
+
+
+# Installation
+
+```bash
+npm i vue-stroll -S
+```
+
+# Import
+
+**ES6**
+```javascript
+import VueStroll from 'vue-stroll'
+```
+
+**CommonJS**
+
+```javascript
+var VueStroll = require('vue-stroll');
+```
+
+**script**
+
+```javascript
+<script type="text/javascript" src="vue/dist/vue.min.js"></script>
+<script type="text/javascript" src="vue-stroll/dist/vue-stroll.min.js"></script>
+<script type="text/javascript">
+    var VueStroll = window['vue-stroll'];
+</script>
+```
+
+# Basic Usage
+
+**script**
+
+```javascript
+new Vue({
+  el: 'body',
+  data: {
+    effect: 'cards',
+    collection: [
+      'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'
+    ]
+  },
+  components: { VueStroll }
+});
+```
+
+**html**
+
+```html
+<!-- Literal -->
+<vue-stroll collection="['One', 'Two', 'Three', 'Four', 'Five']" effect="cards"></vue-stroll>
+<!-- Dynamic -->
+<vue-stroll :collection="collection" :effect="effect"></vue-stroll>
+```
+
+# Props
+
+| Name  | Type | Desc  | Example  |
+| :-------- | :--------:|:--------:|:--------:|
+| collection | Array  | The list you will render | ['One', 'Two', 'Three', 'Four', 'Five'] |
+| effect | String  | The effect of Stroll | See [Demo]() |
+
+# License
+
+MIT
