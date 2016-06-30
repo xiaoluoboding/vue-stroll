@@ -4,9 +4,9 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    path: path.resolve(__dirname, './demo'),
+    publicPath: '/demo/',
+    filename: 'vue-stroll.js'
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),

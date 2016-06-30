@@ -5,6 +5,7 @@
   "main": "dist/vue-stroll.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --port 8090",
+    "demo": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.prod.js",
     "prepublish": "npm run build"
   },
