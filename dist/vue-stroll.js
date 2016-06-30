@@ -75,9 +75,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	exports.default = {
-	  props: ['effect', 'collection'],
+	  props: ['el', 'effect', 'collection'],
 	
 	  ready: function ready() {
+	    var self = this;
+	
 	    window.requestAnimFrame = function () {
 	      return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) {
 	        window.setTimeout(callback, 1000 / 60);
@@ -126,7 +128,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 	
-	    var lists = document.querySelectorAll('#app ul');
+	    var lists = document.querySelectorAll(self.el);
 	
 	    for (var i = 0; i < lists.length; i++) {
 	      Stroll.bind(lists[i]);
@@ -143,7 +145,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "ul{width:200px;height:320px;overflow-x:hidden;overflow-y:scroll;padding:0;margin:0}ul,ul li{position:relative}ul li{list-style:none;padding:6px;background:#fff;color:#252525;font-size:16px;z-index:2}ul li:nth-child(odd){background:#eee}", ""]);
+	exports.push([module.id, "ul[_v-3702f133]{position:relative;width:200px;height:320px;overflow-x:hidden;overflow-y:scroll;padding:0;margin:0}ul li[_v-3702f133]{list-style:none;position:relative;padding:6px;background:#fff;color:#252525;font-size:16px;z-index:2}ul li[_v-3702f133]:nth-child(odd){background:#eee}@media (max-width:750px){ul[_v-3702f133]{min-width:216px;height:320px}}@media (max-width:480px){ul[_v-3702f133]{min-width:280px;height:320px}}", ""]);
 	
 	// exports
 
@@ -208,7 +210,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports) {
 
-	module.exports = " <ul id=vue-stroll class=vue-stroll :class=effect> <li v-for=\"col in collection\" track-by=$index> <span v-text=col></span> </li> </ul> ";
+	module.exports = " <ul id=vue-stroll class=vue-stroll :class=effect _v-3702f133=\"\"> <li v-for=\"col in collection\" track-by=$index _v-3702f133=\"\"> <span v-text=col _v-3702f133=\"\"></span> </li> </ul> ";
 
 /***/ },
 /* 5 */
@@ -448,8 +450,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./vue-stroll.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./vue-stroll.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3702f133&scoped=true!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./vue-stroll.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3702f133&scoped=true!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./vue-stroll.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

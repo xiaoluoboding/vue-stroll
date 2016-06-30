@@ -4,7 +4,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/xiaoluoboding/vue-stroll/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/xiaoluoboding/vue-stroll.svg?style=flat-square)](https://github.com/xiaoluoboding/vue-stroll/stargazers)
 
-Vue.js + Stroll.js
+Vue.js + Stroll.js. Awesome CSS list scroll effects for Vue.js. See [Demo](https://xiaoluoboding.github.io/vue-number-spinner)
 
 [![NPM](https://nodei.co/npm/vue-stroll.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-stroll/)
 
@@ -38,7 +38,7 @@ var VueStroll = require('vue-stroll');
 </script>
 ```
 
-# Basic Usage
+# Usage
 
 **script**
 
@@ -46,6 +46,7 @@ var VueStroll = require('vue-stroll');
 new Vue({
   el: 'body',
   data: {
+    el: '#app ul'
     effect: 'cards',
     collection: [
       'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'
@@ -59,17 +60,18 @@ new Vue({
 
 ```html
 <!-- Literal -->
-<vue-stroll collection="['One', 'Two', 'Three', 'Four', 'Five']" effect="cards"></vue-stroll>
+<vue-stroll el="#app ul" collection="['One', 'Two', 'Three', 'Four', 'Five']" effect="cards"></vue-stroll>
 <!-- Dynamic -->
-<vue-stroll :collection="collection" :effect="effect"></vue-stroll>
+<vue-stroll :el="el" :collection="collection" :effect="effect"></vue-stroll>
 ```
 
 # Props
 
 | Name  | Type | Desc  | Example  |
 | :-------- | :--------:|:--------:|:--------:|
+| el | String  | The element you will bind | "#app ul" |
 | collection | Array  | The list you will render | ['One', 'Two', 'Three', 'Four', 'Five'] |
-| effect | String  | The effect of Stroll | See [Demo]() |
+| effect | String  | The awesome effects style | `wave` See [Demo](https://xiaoluoboding.github.io/vue-number-spinner) |
 
 # License
 

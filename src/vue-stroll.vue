@@ -1,11 +1,14 @@
 <script>
   export default {
     props: [
+      'el',
       'effect',
       'collection'
     ],
 
     ready() {
+      var self = this;
+
       window.requestAnimFrame = (function() {
         return window.requestAnimationFrame ||
           window.webkitRequestAnimationFrame ||
@@ -65,7 +68,7 @@
         }
       };
 
-      var lists = document.querySelectorAll('#app ul');
+      var lists = document.querySelectorAll(self.el);
 
       for (var i = 0; i < lists.length; i++) {
         Stroll.bind(lists[i]);
@@ -82,7 +85,7 @@
   </ul>
 </template>
 
-<style media="screen">
+<style scoped>
 ul {
   position: relative;
   width: 200px;
@@ -105,5 +108,19 @@ ul li {
 
 ul li:nth-child(odd) {
   background: #eee;
+}
+
+@media (max-width: 750px) {
+  ul {
+    min-width: 216px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    min-width: 280px;
+    height: 320px;
+  }
 }
 </style>

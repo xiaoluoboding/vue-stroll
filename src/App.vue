@@ -4,7 +4,8 @@
   export default {
     data() {
       return {
-        msg: 'Vue.js + Stroll.js',
+        msg: 'Vue.js + Stroll.js.',
+        el: "#app ul",
         effects: [
           'grow', 'cards', 'curl', 'wave', 'flip', 'fly', 'fly-simplified',
           'fly-reverse', 'skew', 'fan', 'papercut', 'helix', 'twirl', 'tilt',
@@ -34,12 +35,15 @@
 <template>
   <div id="app">
     <header>
-      <h1>{{ msg }} </h1>
+      <h1>
+        {{ msg }} Awesome CSS list scroll effects for Vue.js.
+        See <a href="https://github.com/xiaoluoboding/vue-stroll" target="_blank">Doc</a>.
+      </h1>
       <hr>
     </header>
     <article v-for="ef in effects | orderBy ef 1">
       <h2 class="title" v-text="ef"></h2>
-      <vue-stroll :collection="collection" :effect="ef"></vue-stroll>
+      <vue-stroll el="#app ul" :collection="collection" :effect="ef"></vue-stroll>
     </article>
     <a class="github-fork-ribbon" href="https://github.com/xiaoluoboding/vue-stroll" title="Fork me on GitHub"></a>
   </div>
@@ -57,11 +61,19 @@ header {
 
 article {
   display: inline-block;
-  margin: 15px;
+  margin: 10px;
 }
 
 #app h1 {
   color: #fff;
+}
+
+#app h1 a {
+  color: #e74c3c;
+}
+
+#app h1 a:hover {
+  color: #c0392b;
 }
 
 .title {
