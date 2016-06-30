@@ -55,9 +55,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(6)
-	__vue_script__ = __webpack_require__(1)
-	__vue_template__ = __webpack_require__(4)
+	__webpack_require__(7)
+	__vue_script__ = __webpack_require__(2)
+	__vue_template__ = __webpack_require__(5)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -67,6 +67,62 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 1 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 2 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -137,12 +193,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(3)();
+	exports = module.exports = __webpack_require__(1)();
 	// imports
 	
+	
+	// module
+	exports.push([module.id, "/*!\r\n * stroll.js 1.2 - CSS scroll effects\r\n * http://lab.hakim.se/scroll-effects\r\n * MIT licensed\r\n *\r\n * Copyright (C) 2012 Hakim El Hattab, http://hakim.se\r\n */.cards{-webkit-perspective:300px;-ms-perspective:300px;-o-perspective:300px;perspective:300px;-webkit-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;-o-perspective-origin:50% 50%;perspective-origin:50% 50%}.cards li{-webkit-transition:all .6s ease;transition:all .6s ease;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}.cards li.past{-webkit-transform:translate3d(0,-100px,-100px) rotateX(-90deg);transform:translate3d(0,-100px,-100px) rotateX(-90deg)}.cards li.future{-webkit-transform:translate3d(0,100px,-100px) rotateX(90deg);transform:translate3d(0,100px,-100px) rotateX(90deg)}.grow li{-webkit-transition:all .6s ease;transition:all .6s ease;-webkit-transform-origin:50% 50%;transform-origin:50% 50%}.grow li.future,.grow li.past{-webkit-transform:scale(.01);transform:scale(.01)}.flip{-webkit-perspective:400px;-ms-perspective:400px;-o-perspective:400px;perspective:400px;-webkit-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;-o-perspective-origin:50% 50%;perspective-origin:50% 50%}.flip li{-webkit-transition:all .6s ease,opacity .3s ease;transition:all .6s ease,opacity .3s ease;-webkit-transform-origin:0 0;transform-origin:0 0}.flip li.past{opacity:0;-webkit-transform-origin:0 100%;transform-origin:0 100%;-webkit-transform:rotateX(80deg);transform:rotateX(80deg)}.flip li.future{opacity:0;-webkit-transform:rotateX(-80deg);transform:rotateX(-80deg)}.fly{-webkit-perspective:400px;-ms-perspective:400px;-o-perspective:400px;perspective:400px;-webkit-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;-o-perspective-origin:50% 50%;perspective-origin:50% 50%}.fly li{-webkit-transition:all .6s ease,opacity .3s ease;transition:all .6s ease,opacity .3s ease;-webkit-transform-origin:50% 50% -50px;transform-origin:50% 50% -50px}.fly li.past{opacity:0;-webkit-transform:rotateX(180deg);transform:rotateX(180deg)}.fly li.future{opacity:0;-webkit-transform:rotateX(-180deg);transform:rotateX(-180deg)}.fly-simplified{-webkit-perspective:300px;-ms-perspective:300px;-o-perspective:300px;perspective:300px;-webkit-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;-o-perspective-origin:50% 50%;perspective-origin:50% 50%}.fly-simplified li{-webkit-transition:all .6s ease;transition:all .6s ease;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}.fly-simplified li.past{-webkit-transform:translate3d(0,-100px,-100px) rotateX(90deg);transform:translate3d(0,-100px,-100px) rotateX(90deg)}.fly-simplified li.future{-webkit-transform:translate3d(0,100px,-100px) rotateX(-90deg);transform:translate3d(0,100px,-100px) rotateX(-90deg)}.fly-reverse{-webkit-perspective:400px;-ms-perspective:400px;-o-perspective:400px;perspective:400px;-webkit-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;-o-perspective-origin:50% 50%;perspective-origin:50% 50%}.fly-reverse li{-webkit-transition:all .6s ease,opacity .3s ease;transition:all .6s ease,opacity .3s ease;-webkit-transform-origin:50% 50% -50px;transform-origin:50% 50% -50px}.fly-reverse li.past{opacity:0;-webkit-transform:rotateX(-180deg);transform:rotateX(-180deg)}.fly-reverse li.future{opacity:0;-webkit-transform:rotateX(180deg);transform:rotateX(180deg)}.skew{-webkit-perspective:600px;-ms-perspective:600px;-o-perspective:600px;perspective:600px;-webkit-perspective-origin:0 50%;-ms-perspective-origin:0 50%;-o-perspective-origin:0 50%;perspective-origin:0 50%}.skew li{-webkit-transition:all .6s ease,opacity .2s ease;transition:all .6s ease;-webkit-transform-origin:0 0;transform-origin:0 0}.skew li.past{-webkit-transform:skewY(30deg);transform:skewY(30deg)}.skew li.future{z-index:0;-webkit-transform:skewY(-30deg);transform:skewY(-30deg)}.helix{-webkit-perspective:600px;-ms-perspective:600px;-o-perspective:600px;perspective:600px;-webkit-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;-o-perspective-origin:50% 50%;perspective-origin:50% 50%}.helix li{-webkit-transition:all .6s ease,opacity .2s ease;transition:all .6s ease,opacity .2s ease;-webkit-transform-origin:50% 50%;transform-origin:50% 50%}.helix li.past{opacity:0;-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}.helix li.future{opacity:0;-webkit-transform:rotateY(-180deg);transform:rotateY(-180deg)}.wave li{-webkit-transition:all .6s cubic-bezier(.26,.86,.44,.985);transition:all .6s cubic-bezier(.26,.86,.44,.985)}.wave li.future,.wave li.past{-webkit-transform:translateX(-70%);transform:translateX(-70%)}.fan li{-webkit-transition:all .6s cubic-bezier(.39,.575,.565,1);transition:all .6s cubic-bezier(.39,.575,.565,1);-webkit-transform-origin:0 0;transform-origin:0 0}.fan li.past{-webkit-transform:rotate(-60deg);transform:rotate(-60deg)}.fan li.future{-webkit-transform:rotate(70deg);transform:rotate(70deg)}.tilt{-webkit-perspective:800px;-ms-perspective:800px;-o-perspective:800px;perspective:800px;-webkit-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;-o-perspective-origin:50% 50%;perspective-origin:50% 50%}.tilt li{position:relative;-webkit-transition:all 1s cubic-bezier(.26,.86,.44,.985),opacity .3s ease;transition:all 1s cubic-bezier(.26,.86,.44,.985),opacity .3s ease}.tilt li.past{opacity:0;-webkit-transform:translateY(100%) translateZ(-200px);transform:translateY(100%) translateZ(-200px)}.tilt li.future{opacity:0;-webkit-transform:translateY(-100%) translateZ(-200px);transform:translateY(-100%) translateZ(-200px)}.curl{-webkit-perspective:600px;-ms-perspective:600px;-o-perspective:600px;perspective:600px;-webkit-perspective-origin:0 50%;-ms-perspective-origin:0 50%;-o-perspective-origin:0 50%;perspective-origin:0 50%}.curl li{-webkit-transition:all .6s ease,opacity .2s ease;transition:all .6s ease,opacity .2s ease;-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.curl li.future,.curl li.past{opacity:0;-webkit-transform:rotateY(90deg);transform:rotateY(90deg)}.papercut{-webkit-perspective:600px;-ms-perspective:600px;-o-perspective:600px;perspective:600px;-webkit-perspective-origin:0 0;-ms-perspective-origin:0 0;-o-perspective-origin:0 0;perspective-origin:0 0}.papercut li{-webkit-transition:all .6s ease;transition:all .6s ease;-webkit-transform-origin:0 0;transform-origin:0 0}.papercut li.past{-webkit-transform:skewY(-30deg);transform:skewY(-30deg)}.papercut li.future{-webkit-transform:skewY(30deg);transform:skewY(30deg)}.zipper li{-webkit-transition:all .6s cubic-bezier(.39,.575,.565,1);transition:all .6s cubic-bezier(.39,.575,.565,1);-webkit-transform-origin:50% 0;transform-origin:50% 0}.zipper li.future:nth-child(odd),.zipper li.past:nth-child(odd){-webkit-transform:translateX(80%);transform:translateX(80%)}.zipper li.future:nth-child(even),.zipper li.past:nth-child(even){-webkit-transform:translateX(-80%);transform:translateX(-80%)}.fade li{-webkit-transition:opacity .35s ease-in-out;transition:opacity .35s ease-in-out}.fade li.future,.fade li.past{opacity:0}.twirl{-webkit-perspective:400px;-ms-perspective:400px;-o-perspective:400px;perspective:400px;-webkit-perspective-origin:50% 50%;-ms-perspective-origin:50% 50%;-o-perspective-origin:50% 50%;perspective-origin:50% 50%}.twirl li{-webkit-transition:all .6s ease,opacity .2s ease;transition:all .6s ease,opacity .2s ease;-webkit-transform-origin:50% 50%;transform-origin:50% 50%}.twirl li.past{opacity:0;-webkit-transform:rotate3d(80,-70,10,180deg);transform:rotate3d(80,70,10,180deg)}.twirl li.future{opacity:0;-webkit-transform:rotate3d(80,70,10,-180deg);transform:rotate3d(80,70,10,-180deg)}", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(1)();
+	// imports
+	exports.i(__webpack_require__(3), "");
 	
 	// module
 	exports.push([module.id, "ul[_v-3702f133]{position:relative;width:200px;height:320px;overflow-x:hidden;overflow-y:scroll;padding:0;margin:0}ul li[_v-3702f133]{list-style:none;position:relative;padding:6px;background:#fff;color:#252525;font-size:16px;z-index:2}ul li[_v-3702f133]:nth-child(odd){background:#eee}@media (max-width:750px){ul[_v-3702f133]{min-width:216px;height:320px}}@media (max-width:480px){ul[_v-3702f133]{min-width:280px;height:320px}}", ""]);
@@ -151,69 +221,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	module.exports = " <ul id=vue-stroll class=vue-stroll :class=effect _v-3702f133=\"\"> <li v-for=\"col in collection\" track-by=$index _v-3702f133=\"\"> <span v-text=col _v-3702f133=\"\"></span> </li> </ul> ";
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -435,16 +449,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(2);
+	var content = __webpack_require__(4);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {

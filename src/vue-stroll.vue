@@ -86,6 +86,8 @@
 </template>
 
 <style scoped>
+@import '../lib/stroll.min.css';
+
 ul {
   position: relative;
   width: 200px;

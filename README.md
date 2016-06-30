@@ -59,9 +59,7 @@ new Vue({
 **html**
 
 ```html
-<!-- Literal -->
-<vue-stroll el="#app ul" collection="['One', 'Two', 'Three', 'Four', 'Five']" effect="cards"></vue-stroll>
-<!-- Dynamic -->
+<!-- Dynamic props -->
 <vue-stroll :el="el" :collection="collection" :effect="effect"></vue-stroll>
 ```
 
