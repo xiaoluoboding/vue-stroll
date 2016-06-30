@@ -4,7 +4,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/xiaoluoboding/vue-stroll/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/xiaoluoboding/vue-stroll.svg?style=flat-square)](https://github.com/xiaoluoboding/vue-stroll/stargazers)
 
-Vue.js + Stroll.js. Awesome CSS list scroll effects for Vue.js. See [Demo](https://xiaoluoboding.github.io/vue-number-spinner)
+Vue.js + Stroll.js. Awesome CSS list scroll effects for Vue.js. See [Demo](https://xiaoluoboding.github.io/vue-stroll)
 
 [![NPM](https://nodei.co/npm/vue-stroll.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-stroll/)
 
@@ -71,7 +71,7 @@ new Vue({
 | :-------- | :--------:|:--------:|:--------:|
 | el | String  | The element you will bind | "#app ul" |
 | collection | Array  | The list you will render | ['One', 'Two', 'Three', 'Four', 'Five'] |
-| effect | String  | The awesome effects style | `wave` See [Demo](https://xiaoluoboding.github.io/vue-number-spinner) |
+| effect | String  | The awesome effects style | `wave` See [Demo](https://xiaoluoboding.github.io/vue-stroll) |
 
 # License
 
