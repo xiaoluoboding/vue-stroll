@@ -46,7 +46,7 @@ var VueStroll = require('vue-stroll');
 new Vue({
   el: 'body',
   data: {
-    el: '#app ul'
+    el: '#app ul',
     effect: 'cards',
     collection: [
       'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'
