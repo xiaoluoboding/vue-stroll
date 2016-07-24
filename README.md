@@ -1,4 +1,5 @@
 # vue-stroll
+[![Travis Build Status](https://travis-ci.org/xiaoluoboding/vue-stroll.svg?branch=master)](https://travis-ci.org/xiaoluoboding/vue-stroll)
 [![npm](https://img.shields.io/npm/v/vue-stroll.svg?maxAge=2592000&style=flat-square)](https://www.npmjs.com/package/vue-stroll)
 ![Download](https://img.shields.io/npm/dt/vue-stroll.svg?style=flat-square)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/xiaoluoboding/vue-stroll/master/LICENSE)
