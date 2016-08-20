@@ -16,6 +16,14 @@ Vue.js + Stroll.js. Awesome CSS list scroll effects for Vue.js. See [Demo](https
 npm i vue-stroll -S
 ```
 
+# CDN
+
+### Use this URL for development
+https://rawgit.com/xiaoluoboding/vue-stroll/master/dist/vue-stroll.min.js
+
+### Use this URL in production
+https://cdn.rawgit.com/xiaoluoboding/vue-stroll/master/dist/vue-stroll.min.js
+
 # Import
 
 **ES6**
