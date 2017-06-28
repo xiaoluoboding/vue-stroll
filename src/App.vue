@@ -41,9 +41,9 @@
       </h1>
       <hr>
     </header>
-    <article v-for="ef in effects | orderBy ef 1">
+    <article v-for="ef in effects">
       <h2 class="title" v-text="ef"></h2>
-      <vue-stroll el="#app ul" :collection="collection" :effect="ef"></vue-stroll>
+      <vue-stroll :el="el" :collection="collection" :effect="ef"></vue-stroll>
     </article>
     <a class="github-fork-ribbon" href="https://github.com/xiaoluoboding/vue-stroll" title="Fork me on GitHub"></a>
   </div>
