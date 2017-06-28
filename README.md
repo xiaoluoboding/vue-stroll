@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/xiaoluoboding/vue-stroll/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/xiaoluoboding/vue-stroll.svg?style=flat-square)](https://github.com/xiaoluoboding/vue-stroll/stargazers)
 
-Vue.js + Stroll.js. Awesome CSS list scroll effects for Vue.js. See [Demo](https://xiaoluoboding.github.io/vue-stroll)
+Vue.js + Stroll.js. Awesome CSS list scroll effects for Vue2.x. See [Demo](https://xiaoluoboding.github.io/vue-stroll)
 
 [![NPM](https://nodei.co/npm/vue-stroll.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-stroll/)
 
