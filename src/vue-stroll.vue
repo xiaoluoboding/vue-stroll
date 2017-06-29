@@ -6,9 +6,7 @@
       'collection'
     ],
 
-    ready() {
-      var self = this;
-
+    mounted() {
       window.requestAnimFrame = (function() {
         return window.requestAnimationFrame ||
           window.webkitRequestAnimationFrame ||
@@ -68,7 +66,7 @@
         }
       };
 
-      var lists = document.querySelectorAll(self.el);
+      var lists = document.querySelectorAll(this.el);
 
       for (var i = 0; i < lists.length; i++) {
         Stroll.bind(lists[i]);
@@ -86,6 +84,8 @@
 </template>
 
 <style scoped>
+@import '../lib/stroll.min.css';
+
 ul {
   position: relative;
   width: 200px;
