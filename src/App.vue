@@ -5,6 +5,7 @@
     data() {
       return {
         msg: 'Vue.js + Stroll.js.',
+        version: 'Vue2.x',
         el: "#app ul",
         effects: [
           'grow', 'cards', 'curl', 'wave', 'flip', 'fly', 'fly-simplified',
@@ -36,7 +37,7 @@
   <div id="app">
     <header>
       <h1>
-        {{ msg }} Awesome CSS list scroll effects for Vue.js.
+        {{ msg }} Awesome CSS list scroll effects for {{ version }}.
         See <a href="https://github.com/xiaoluoboding/vue-stroll" target="_blank">Doc</a>.
       </h1>
       <hr>
